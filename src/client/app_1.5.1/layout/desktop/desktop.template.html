@@ -1,0 +1,14 @@
+<style>
+    .desktop{
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        background-color: lightgrey;
+        bottom: 0;
+        top: 0px;
+    }
+</style>
+<span class="desktop">
+
+    <button ng-repeat="window in modelService.windows" ng-bind="window.title"></button>
+</span>
