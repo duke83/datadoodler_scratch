@@ -1,12 +1,14 @@
 (function () {
     'use strict';
     angular.module('layout.module')
-        .directive('headerBar',['modelService',function(modelService){
+        .directive('sectionPad',['modelService',function(modelService){
             return {
                 restrict:'E',
-                templateUrl:'app_1.5.1/layout/headerBar/headerBar.template.html',
+                templateUrl:'app_1.5.1/layout/sectionPad/sectionPad.template.html',
+                scope:{sect:'='},
                 controller:function($scope){
                     $scope.modelService=modelService;
+                    console.log($scope)
                 }
             }
         }])
