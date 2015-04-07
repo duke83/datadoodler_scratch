@@ -65,7 +65,7 @@ body{
     resize: both;
     position: relative;
     border: none;
-    width: 400px;
+    width: 600px;
     height:400px;
     min-height: 20px;
     min-width:20px;
@@ -151,7 +151,7 @@ body{
     color: #fffb81;
 }
 .storyboard-section-pad-close{
-    color: #d0b953;
+    color: #195065;
 }
 .storyboard-section-pad-content{
 
