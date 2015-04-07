@@ -1,3 +1,7 @@
+body{
+    background-color: #f5f2ec;
+}
+
 .headerbar-container {
     display: table;
     width: 100%;
@@ -38,18 +42,117 @@
 }
 
 .desktop {
-    background-color: #f5f2ec;
-    position: absolute;
+
+}
+
+.menu-bar{
     display: block;
-    height: 100%;
-    width: 100%
+    background-color: #fcf9f3;;
+    height:3rem;
+}
+
+.menu-bar-button{
+    position: relative;
+    display: inline-block;
+    font-size: larger;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    cursor: pointer;
+    top: 5px;
 }
 
 .section-pad-container {
     resize: both;
     position: relative;
-    border: 1px solid darkgray;
-    width: 300px;
+    border: none;
+    width: 400px;
+    height:400px;
+    min-height: 20px;
+    min-width:20px;
     overflow: auto;
-    font-size: xx-large;
+    margin: 5px;
+    display: inline-block;
+}
+
+
+.section-pad-header {
+    display: table;
+    width: 100%;
+    border:none;
+    background-color: green;
+}
+
+.section-pad-title {
+    display: table-cell;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: .3rem;
+    letter-spacing: .3rem;
+    width:100%;
+}
+
+.section-pad-close {
+    display: table-cell;
+    text-align: right;
+    padding: 2px;
+    top: initial;
+    vertical-align: middle;
+    cursor:pointer;
+}
+
+.section-pad-content{
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+}
+
+.glossary-section-pad-container{
+    background-color:#8de4ad;
+}
+
+.glossary-section-pad-header{
+    background-color: #20c26f;
+    color: #edece8;
+}
+.glossary-section-pad-close{
+    color: #0f5732;
+}
+.glossary-section-pad-content{
+
+}
+
+
+
+
+.variables-section-pad-container{
+    background-color: #f8f47a;
+}
+
+.variables-section-pad-header{
+    background-color: #fffb81;
+    color: #897f3e;
+}
+.variables-section-pad-close{
+    color: #d0b953;
+}
+.variables-section-pad-content{
+
+}
+
+
+
+.storyboard-section-pad-container{
+    background-color: #96e9ff;
+}
+
+.storyboard-section-pad-header{
+    background-color: #40caff;
+    color: #fffb81;
+}
+.storyboard-section-pad-close{
+    color: #d0b953;
+}
+.storyboard-section-pad-content{
+
 }

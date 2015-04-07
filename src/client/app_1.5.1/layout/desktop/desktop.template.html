@@ -1,8 +1,11 @@
 
 <span class="desktop">
-
-    <button ng-repeat="window in modelService.windows" ng-bind="window.title" ng-click="window.active=!window.active"></button>
-
+<div class="menu-bar">
+    <span ng-repeat="window in modelService.windows"
+            ng-bind="window.title"
+            class="menu-bar-button"
+            ng-click="window.active=true"></span>
+</div>
 
     <section-pad ng-repeat="sect in modelService.windows" sect="sect"></section-pad>
 </span>

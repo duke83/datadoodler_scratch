@@ -8,7 +8,7 @@
             modelService.title="The News on the News";
 
             modelService.windows=[
-                {title:"Glossary", active:false},
+                {title:"Glossary", active:true},
                 {title:"Variables", active:false},
                 {title:"Storyboard", active:false}
             ]

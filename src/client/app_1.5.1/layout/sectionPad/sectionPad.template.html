@@ -1,3 +1,16 @@
-<div draggable="true" class="section-pad-container" ng-show="sect.active">
-    sectionPad:{{sect.title}} - {{sect.active}}
+<div draggable="true"
+     ng-class="'section-pad-container ' + sect.title.toLowerCase() + '-section-pad-container'"
+     ng-show="sect.active">
+
+    <div ng-class="'section-pad-header ' + sect.title.toLowerCase() + '-section-pad-header'">
+        <span class="section-pad-title" ng-bind="sect.title"></span>
+
+        <span ng-class="'section-pad-close '  + sect.title.toLowerCase() + '-section-pad-close ' +  'glyphicon glyphicon-remove'"
+                ng-click="sect.active=false"></span>
+    </div>
+
+    <div ng-class="'section-pad-content ' + sect.title.toLowerCase() + '-section-pad-content ' ">
+        {{sect.title}} directive goes here.
+    </div>
+
 </div>
