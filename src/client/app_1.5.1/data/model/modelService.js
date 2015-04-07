@@ -9,10 +9,11 @@
 
             modelService.windows=[
                 {title:"Glossary", active:true},
-                {title:"Variables", active:false},
+                {title:"Variables", active:true},
                 {title:"Storyboard", active:false}
             ]
 
+            modelService.dataSources={"Name":"FDIC Datasource"};
             return modelService;
         }])
 }());

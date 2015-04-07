@@ -10,7 +10,8 @@
     </div>
 
     <div ng-class="'section-pad-content ' + sect.title.toLowerCase() + '-section-pad-content ' ">
-        {{sect.title}} directive goes here.
+        {{modelService.dataSources}}
+        <glossary ng-if="sect.title.toLowerCase()==='glossary'" ng-attr-dataSources="modelService.dataSources"></glossary>
     </div>
 
 </div>
