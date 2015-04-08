@@ -8,9 +8,9 @@
             modelService.title = "The News on the News";
 
             modelService.windows = [
-                {"title": "Glossary", "active": "true"},
-                {"title": "Variables", "active": "true"},
-                {"title": "Storyboard", "active": "false"}
+                {"title": "Glossary", "active": true},
+                {"title": "Variables", "active": false},
+                {"title": "Storyboard", "active": false}
             ];
 
             modelService.dataSources = [
