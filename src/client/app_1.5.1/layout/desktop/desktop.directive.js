@@ -7,6 +7,7 @@
                 templateUrl:'app_1.5.1/layout/desktop/desktop.template.html',
                 controller:function($scope){
                     $scope.modelService=modelService;
+
                 }
             }
         }])
