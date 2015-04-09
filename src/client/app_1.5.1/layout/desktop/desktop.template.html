@@ -11,8 +11,8 @@
                  sect="sect"
                  ng-style="{width:sect.width,height:sect.height,top:sect.top,left:sect.left,'z-index':sect.z}"
                  style="position:absolute;display:inline-block"
-                 ng-click="modelService.activateWindow(sect.title)"
+                 ng-click="modelService.activateWindow(sect.title,$event)"
                  ng-if="sect.active"
-                 ng-hide="sect.hideMe"
+                 ng-hide="sect.minimized"
             ></div>
 </span>
