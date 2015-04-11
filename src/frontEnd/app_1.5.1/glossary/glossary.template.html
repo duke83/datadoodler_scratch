@@ -1,10 +1,6 @@
 <div class="glossary-directive-container">
-    <div class="glossary-directive-datasources-container">
-        <span>Data Sources</span>
-        <div ng-repeat="ds in dataSources">
-            <span ng-bind="ds.name"></span>
-        </div>
-    </div>
+    <data-sources-panel></data-sources-panel>
+
     <div class="glossary-directive-search-bar">
         <span class="glyphicon glyphicon-search"></span>
         <input type="text">
