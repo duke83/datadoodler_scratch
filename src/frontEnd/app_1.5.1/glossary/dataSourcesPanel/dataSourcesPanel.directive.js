@@ -1,14 +1,11 @@
 (function () {
     'use strict';
-    angular.module('layout.module')
-        .directive('dataSourcesPanel',['modelService',function(modelService){
+    angular.module('dataDoodler.module')
+        .directive('datasourcesPanel',function(){
             return {
                 restrict:'E',
-                templateUrl:'app_1.5.1/glossary/dataSourcesPanel/dataSourcesPanel.template.html',
-                controller:function($scope){
-                    $scope.modelService=modelService;
+                templateUrl:'app_1.5.1/glossary/datasourcesPanel/datasourcesPanel.template.html'
 
-                }
             }
-        }])
+        })
 }());
