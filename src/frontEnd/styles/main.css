@@ -143,7 +143,14 @@ body{
     padding:.5rem;
     margin-bottom: 1rem;
 }
-
+.glossary-directive-data-sources-panel-container{
+    background-color: red;
+    
+}
+.data-sources-panel-datasource-name{
+    color:red;
+    margin-right:2rem;
+}
 .variables-section-pad-container{
     background-color: #f8f47a;
 }
