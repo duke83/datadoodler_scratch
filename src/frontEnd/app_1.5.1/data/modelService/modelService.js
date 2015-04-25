@@ -5,7 +5,7 @@
 
             var modelService = {};
             modelService.model = {};
-            modelService.title = "The News on the News";
+            modelService.title = "My FDIC Stuff";
 
             modelService.windows = [
                 {

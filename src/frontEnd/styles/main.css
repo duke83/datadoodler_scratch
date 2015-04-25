@@ -151,6 +151,21 @@ body{
     color:red;
     margin-right:2rem;
 }
+
+.data-sources-panel-datasource-info-icon{
+    color: blue;
+    font-size: larger;
+    margin-left: .35rem;
+    cursor:pointer;
+}
+
+.data-sources-panel-datasource-info-container{
+    background-color:lightseagreen;
+    padding:1rem;
+    color: blue;
+}
+
+
 .variables-section-pad-container{
     background-color: #f8f47a;
 }

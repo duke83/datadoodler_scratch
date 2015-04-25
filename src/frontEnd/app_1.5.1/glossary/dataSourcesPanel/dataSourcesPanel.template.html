@@ -3,7 +3,20 @@
 <div class="glossary-directive-datasources-container">
     <span>Data Sources:</span>
 
-    <span class="data-sources-panel-datasource-name" ng-repeat="ds in modelService.dataSources" ng-bind="ds.name">
+{{vm.test}}
+    <span class="data-sources-panel-datasource-name" 
+        ng-repeat="ds in vm.modelService1.dataSources" >
+        <span ng-bind="ds.name"></span>
+        <span class="data-sources-panel-datasource-info-icon glyphicon glyphicon-info-sign" 
+            ng-click="vm.showDatasetInfo(ds.name)"></span>
     </span>
+
+
+    <select ng-options="ds in glossaryService.availableDataSets"></select>
+
+<div ng-show="vm.showDatasetInfo"
+    class="data-sources-panel-datasource-info-container">
+ <dataset-info></dataset-info>
+    </div>
 </div>
 </span>

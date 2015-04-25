@@ -8,7 +8,7 @@
                 scope:{sect:'='},
                 controller:function($scope){
                     $scope.modelService=modelService;
-                    console.log($scope)
+                    
                 }
             }
         }])
