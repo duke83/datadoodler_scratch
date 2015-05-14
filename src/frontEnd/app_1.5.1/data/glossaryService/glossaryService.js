@@ -5,7 +5,16 @@
 
             var glossaryService = {};
 
-            glossaryService.availableDataSets = [{"name":"FDIC SDI Data"},{"name":"Custom Upload 5/5/2015"}];
+            glossaryService.availableDataSets = [{"name":"FDIC SDI Data","nickname":"","description":"Data is updated quarterly. Last update occurred 3/28/2015."},{"name":"Custom Upload 5/5/2015"}];
+
+            glossaryService.getDatasetInfo=function(datasetName){
+              for(var i=0;i<glossaryService.availableDataSets.length;i++){
+                  if(glossaryService.availableDataSets[i].name===datasetName){
+                      return glossaryService.availableDataSets[i];
+                  }
+              }
+            };
+
 
             glossaryService.getGlossary=function(dataSources){
                 return [

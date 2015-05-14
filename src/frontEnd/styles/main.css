@@ -164,8 +164,29 @@ body{
     padding:1rem;
     color: blue;
 }
+.dataset-info-label{
+color:darkgray;
+margin-right:1rem;
+}
+.dataset-info-value{
+    color:darkgreen;
+
+}
+.new-dataset-container{
+    /* position:absolute; */
+    background: pink;
+    display: block;
+}
 
 
+.new-dataset-selection-container{
+    display: inline-block;
+    border:1px solid darkslategray;
+    height: 100%;
+    position:relative;
+    top:0px;
+    bottom:0px;
+}
 .variables-section-pad-container{
     background-color: #f8f47a;
 }
