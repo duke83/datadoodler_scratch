@@ -6,9 +6,13 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var passport = require('passport');
+//initialize mongoose schemas
+require('./models/models');
+var index = require('./routes/index');
 var api = require('./routes/api');
 var authenticate = require('./routes/authenticate')(passport);
-
+var mongoose = require('mongoose');                         //add for Mongo support
+mongoose.connect('mongodb://localhost/test-chirp');              //connect to Mongo
 var app = express();
 
 // view engine setup
@@ -25,15 +29,21 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname,'node_modules')));
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use('/', index);
 app.use('/auth', authenticate);
 app.use('/api', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
+    console.log(__dirname + req);
+    console.log(req.originalUrl);
+    console.log(req.headers);
+    console.log(res.connection.server.connections);
+    var err = new Error(req + 'Not Found');
     err.status = 404;
     next(err);
 });

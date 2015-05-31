@@ -11,33 +11,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "src/backEnd/routes/api.js",
-			"settings":
-			{
-				"buffer_size": 1625,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/backEnd/package.json",
-			"settings":
-			{
-				"buffer_size": 473,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "var express = require('express');\nvar path = require('path');\nvar favicon = require('serve-favicon');\nvar logger = require('morgan');\nvar cookieParser = require('cookie-parser');\nvar bodyParser = require('body-parser');\nvar session = require('express-session');\nvar passport = require('passport');\nvar api = require('./routes/api');\nvar authenticate = require('./routes/authenticate')(passport);\nvar mongoose = require('mongoose')\n//connect to mongodb\nmongoose.connect(\"mongodb://localhost:27017/datadooder\");\nvar app = express();\n\n// view engine setup\napp.set('views', path.join(__dirname, 'views'));\napp.set('view engine', 'ejs');\n\n// uncomment after placing your favicon in /public\n//app.use(favicon(__dirname + '/public/favicon.ico'));\napp.use(logger('dev'));\napp.use(session({\n  secret: 'keyboard cat'\n}));\napp.use(bodyParser.json());\napp.use(bodyParser.urlencoded({ extended: false }));\napp.use(cookieParser());\napp.use(express.static(path.join(__dirname, 'public')));\napp.use(passport.initialize());\napp.use(passport.session());\n\napp.use('/auth', authenticate);\napp.use('/api', api);\n\n// catch 404 and forward to error handler\napp.use(function(req, res, next) {\n    var err = new Error('Not Found');\n    err.status = 404;\n    next(err);\n});\n\n//// Initialize Passport\nvar initPassport = require('./passport-init');\ninitPassport(passport);\n\n// error handlers\n\n// development error handler\n// will print stacktrace\nif (app.get('env') === 'development') {\n    app.use(function(err, req, res, next) {\n        res.status(err.status || 500);\n        res.render('error', {\n            message: err.message,\n            error: err\n        });\n    });\n}\n\n// production error handler\n// no stacktraces leaked to user\napp.use(function(err, req, res, next) {\n    res.status(err.status || 500);\n    res.render('error', {\n        message: err.message,\n        error: {}\n    });\n});\n\n\nmodule.exports = app;",
-			"file": "src/backEnd/app.js",
-			"file_size": 1784,
-			"file_write_time": 130770683428432009,
-			"settings":
-			{
-				"buffer_size": 1897,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -83,7 +56,7 @@
 	},
 	"console":
 	{
-		"height": 188.0,
+		"height": 431.0,
 		"history":
 		[
 			"Package Control",
@@ -116,24 +89,31 @@
 	},
 	"expanded_folders":
 	[
-		"/C/dev/datadoodler",
-		"/C/dev/datadoodler/gulpTasks",
-		"/C/dev/datadoodler/src",
-		"/C/dev/datadoodler/src/backEnd",
-		"/C/dev/datadoodler/src/backEnd/routes"
+		"/C/dev/datadoodler"
 	],
 	"file_history":
 	[
-		"/C/dev/datadoodler/src/backEnd/routes/users.js",
-		"/C/dev/datadoodler/src/backEnd/routes/authenticate.js",
-		"/C/dev/datadoodler/src/backEnd/passport-init.js",
+		"/C/dev/datadoodler/package.json",
+		"/C/dev/datadoodler/src/backEnd/routes/index.js",
+		"/C/dev/datadoodler/src/frontEnd/index.html",
+		"/C/dev/datadoodler/src/backEnd/views/index.ejs",
+		"/C/dev/datadoodler/src/backEnd/views/error.ejs",
+		"/C/dev/datadoodler/src/backEnd/index.html",
+		"/C/dev/datadoodler/src/index.html",
 		"/C/dev/datadoodler/src/backEnd/app.js",
 		"/C/dev/datadoodler/src/backEnd/routes/api.js",
+		"/C/dev/datadoodler/src/backEnd/views/index1.ejs",
+		"/C/dev/datadoodler/src/backEnd/passport-init.js",
+		"/C/dev/datadoodler/src/backEnd/package.json",
+		"/C/dev/datadoodler/src/backEnd/routes/authenticate.js",
+		"/C/Users/Kent/Downloads/DS_Store",
+		"/C/dev/datadoodler/src/backEnd/bin/www",
+		"/C/dev/datadoodler/src/backEnd/models/models.js",
+		"/C/dev/datadoodler/src/backEnd/routes/users.js",
 		"/C/Users/Kent/AppData/Roaming/Sublime Text 3/Packages/CMD/Context.sublime-menu",
 		"/C/Users/Kent/AppData/Roaming/Sublime Text 3/Packages/Cmd/Context.sublime-menu",
 		"/C/dev/datadoodler/src/frontEnd/styles/main.css",
 		"/C/dev/datadoodler/src/backEnd/node_modules/cookie-parser/README.md",
-		"/C/dev/datadoodler/src/backEnd/routes/index.js",
 		"/C/Users/Kent/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/C/dev/datadoodler/datadoodler.sublime-project",
 		"/C/Users/Kent/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -174,7 +154,6 @@
 		"/C/dev/Adaptive.Codes/.gitignore",
 		"/C/Program Files (x86)/Intel/Intel(R) ME FW Recovery Agent/bin/html_docs/index.html",
 		"/C/dev/ckeditor/ckeditor_4.4.6_standard/ckeditor/samples/index.html",
-		"/C/dev/datadoodler/package.json",
 		"/C/dev/datadoodler/public/css/site.css",
 		"/C/dev/datadoodler/views/index.vash",
 		"/C/dev/datadoodler/views/layout.vash",
@@ -202,6 +181,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"index",
 			"usernmae",
 			"app.js",
 			"var express",
@@ -236,99 +216,13 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "src/backEnd/routes/api.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1625,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								761,
-								761
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 347.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/backEnd/package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 473,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								404,
-								404
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/backEnd/app.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1897,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								495,
-								495
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -349,11 +243,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -429,12 +330,12 @@
 		],
 		"width": 392.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 	},
 	"show_minimap": false,
-	"show_open_files": true,
+	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
 	"side_bar_width": 295.0,
