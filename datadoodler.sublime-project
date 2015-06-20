@@ -3,7 +3,7 @@
 	[
 		{
 			"folder_exclude_patterns":[
-			"node_modulesx","bower_componentsx"],
+			"node_modules","bower_componentsx"],
 			"path": "."
 		}
 	]
