@@ -18,3 +18,5 @@ bower_components/
 
 !.elasticbeanstalk/*.global.yml
 
+Framework/obj/
+Framework/bin/
