@@ -4,8 +4,7 @@
         <div class="ps-logo-area col-sm-6">
             <img class="ps-icon" ng-src="{{ iconFile }}" />
             <div class="ps-title-area">
-                <p class="ps-logo-title">{{ title }}</p>
-                <p class="ps-logo-subtitle">{{ subtitle }}</p>
+                
             </div>
 
             <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" 
@@ -26,7 +25,6 @@
 <div class="ps-menu-area"
      ng-show="isMenuVisible"
      ng-class="{'ps-menu-area-vertical': isMenuVertical, 'ps-menu-area-horizontal': !isMenuVertical}">
-    <ps-user-profile></ps-user-profile>
     <ng-transclude></ng-transclude>
 </div>
 

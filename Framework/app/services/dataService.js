@@ -7,7 +7,7 @@ angular.module('app').factory('dataService',
     var locations = [
         {
             id: 1000,
-            name: 'Raquette River',
+            name: 'Raquette Riverx',
             temperature: 55,
             guides: 20,
             rafts: 18,
