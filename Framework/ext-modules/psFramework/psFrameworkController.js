@@ -15,13 +15,7 @@ angular.module("psFramework").controller("psFrameworkController",
                 broadcastMenuState();
             });
 
-            $scope.$on('ps-menu-orientation-changed-event', function (evt, data) {
-                $scope.isMenuVertical = data.isMenuVertical;
-                $timeout(function () {
-                    $($window).trigger('resize');
-                }, 0);
-            });
-
+    
             $($window).on('resize.psFramework', function () {
                 $scope.$apply(function () {
                     checkWidth();

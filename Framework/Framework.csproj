@@ -59,6 +59,11 @@
   <ItemGroup>
     <Content Include="app\appController.js" />
     <Content Include="app\appRouteConfig.js" />
+    <Content Include="app\ddFeatures\ddCalculation\ddCalculation.module.js" />
+    <Content Include="app\ddFeatures\ddGlossary\ddGlossary.module.js" />
+    <Content Include="app\ddFeatures\ddGlossary\ddGlossaryMenu.directive.js" />
+    <Content Include="app\ddFeatures\ddStory\ddStory.module.js" />
+    <Content Include="app\ddFeatures\ddStory\ddStoryMenu.directive.js" />
     <Content Include="app\dialogs\wwaSelectEmployeeController.js" />
     <Content Include="app\dialogs\wwaSelectEmployeeTemplate.html" />
     <Content Include="app\dialogs\wwaSelectLocationTemplate.html" />
@@ -86,6 +91,8 @@
     <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileSmallDirective.js" />
     <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileSmallTemplate.html" />
     <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileTemplate.html" />
+    <Content Include="ext-modules\psMenu\ddMenuPanel.js" />
+    <Content Include="ext-modules\psMenu\ddMenuPanel.template.html" />
     <Content Include="gulpfile.js" />
     <Content Include="images\dd\ddHeaderLogo.png" />
     <Content Include="images\employee-andy.png" />
@@ -119,6 +126,7 @@
     <Content Include="Scripts\angular-route.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="package.json" />
+    <Content Include="app\ddFeatures\ddCalculation\ddCalculationMenu.directive.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -145,7 +153,7 @@
     <Content Include="ext-modules\psMenu\psMenu.css" />
     <Content Include="ext-modules\psMenu\psMenuController.js" />
     <Content Include="ext-modules\psMenu\psMenuDirective.js" />
-    <Content Include="ext-modules\psMenu\psMenuGroupDirective.js" />
+    <Content Include="ext-modules\psMenu\psMenuGroupDirective_deprecated.js" />
     <Content Include="ext-modules\psMenu\psMenuGroupTemplate.html" />
     <Content Include="ext-modules\psMenu\psMenuItemDirective.js" />
     <Content Include="ext-modules\psMenu\psMenuItemTemplate.html" />

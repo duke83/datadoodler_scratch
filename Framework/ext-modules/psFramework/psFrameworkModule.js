@@ -1,3 +1,3 @@
 ﻿"use strict";
 
-angular.module("psFramework", ["psMenu", "psDashboard"]);
+angular.module("psFramework", ["psMenu", "psDashboard","ddCalculation","ddGlossary","ddStory"]);

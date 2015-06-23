@@ -4,10 +4,10 @@
         <div class="ps-logo-area col-sm-6">
             <img class="ps-icon" ng-src="{{ iconFile }}" />
             <div class="ps-title-area">
-                
+
             </div>
 
-            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" 
+            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()"
                  class="ps-collapsed-menu pull-right">
                 <button type="button" class="btn ps-nav-button">
                     <i class="fa fa-bars"></i>
@@ -22,14 +22,19 @@
     </div>
 </div>
 
-<div class="ps-menu-area"
-     ng-show="isMenuVisible"
-     ng-class="{'ps-menu-area-vertical': isMenuVertical, 'ps-menu-area-horizontal': !isMenuVertical}">
-    <ng-transclude></ng-transclude>
+<div class="ps-menu-area ps-menu-area-vertical"     ng-show="isMenuVisible">
+    <dd-menu-panel>
+        Datasets
+    </dd-menu-panel>
+
+    <dd-menu-panel>
+        Variables
+    </dd-menu-panel>
+
+    <dd-menu-panel>
+        Stories
+    </dd-menu-panel>
 </div>
 
-<div ng-view class="ps-view"
-        ng-class="{'ps-view-full-width': !isMenuVertical || !isMenuVisible}">
-</div>
 
 
