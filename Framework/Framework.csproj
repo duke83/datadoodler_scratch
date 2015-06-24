@@ -61,6 +61,7 @@
     <Content Include="app\appRouteConfig.js" />
     <Content Include="app\ddFeatures\ddCalculation\ddCalculation.module.js" />
     <Content Include="app\ddFeatures\ddGlossary\ddGlossary.module.js" />
+    <Content Include="app\ddFeatures\ddGlossary\ddGlossary.template.html" />
     <Content Include="app\ddFeatures\ddGlossary\ddGlossaryMenu.directive.js" />
     <Content Include="app\ddFeatures\ddStory\ddStory.module.js" />
     <Content Include="app\ddFeatures\ddStory\ddStoryMenu.directive.js" />
@@ -91,6 +92,7 @@
     <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileSmallDirective.js" />
     <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileSmallTemplate.html" />
     <Content Include="ext-modules\psFramework\psUserProfile\psUserProfileTemplate.html" />
+    <Content Include="ext-modules\psMenu\ddMenuPanel.css" />
     <Content Include="ext-modules\psMenu\ddMenuPanel.js" />
     <Content Include="ext-modules\psMenu\ddMenuPanel.template.html" />
     <Content Include="gulpfile.js" />

@@ -1,5 +1,9 @@
-﻿<div>
-<hr />
-    This the header that should contain accordion functionality.
-    <ng-transclude></ng-transclude>
+﻿<div class="dd-menu-panel" >
+    <div>
+        <span ng-bind="label"></span>
+        <span ng-click="contentIsVisible=!contentIsVisible">X</span>
+    </div>
+    <div ng-show="contentIsVisible">
+        <ng-transclude></ng-transclude>
+    </div>
 </div>

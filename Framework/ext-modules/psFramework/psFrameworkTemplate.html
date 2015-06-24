@@ -22,17 +22,18 @@
     </div>
 </div>
 
-<div class="ps-menu-area ps-menu-area-vertical"     ng-show="isMenuVisible">
-    <dd-menu-panel>
-        Datasets
+<div class="ps-menu-area ps-menu-area-vertical" ng-show="isMenuVisible">
+
+    <dd-menu-panel label="Raw Data">
+        <dd-glossary-menu></dd-glossary-menu>
     </dd-menu-panel>
 
-    <dd-menu-panel>
-        Variables
+    <dd-menu-panel label="Variables">
+        <dd-calculation-menu></dd-calculation-menu>
     </dd-menu-panel>
 
-    <dd-menu-panel>
-        Stories
+    <dd-menu-panel label="Stories">
+        <dd-story-menu></dd-story-menu>
     </dd-menu-panel>
 </div>
 

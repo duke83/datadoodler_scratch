@@ -1,10 +1,10 @@
 ﻿"use strict";
 
-angular.module('ddCalculation').directive('ddGlossaryMenu.directive', function () {
+angular.module('ddCalculation').directive('ddGlossaryMenu', function () {
     return {
-        template: "<h1>GlossaryMenu</h1>",
+        templateUrl: 'app/ddFeatures/ddGlossary/ddGlossary.template.html', 
         link: function (scp, el, attrs) {
-            console.log('CalculationMenu Scope', scp)
+            console.log('ddGlossaryMenu Scope', scp)
         }
     }
 })
