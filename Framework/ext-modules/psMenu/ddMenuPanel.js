@@ -8,7 +8,7 @@ angular.module('psMenu').directive('ddMenuPanel', function () {
             label: '@',
             icon: '@'
         },
-        templateUrl: 'ext-modules/psMenu/ddMenuPanel.template.html?x2',
+        templateUrl: 'ext-modules/psMenu/ddMenuPanel.template.html?x2xxxxx',
         link: function (scope, el, attrs, ctrl) {
             scope.isOpen = false;
             scope.closeMenu = function () {
