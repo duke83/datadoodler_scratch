@@ -8,7 +8,7 @@ angular.module('app').directive('wwaDashboard', ['$localStorage',
         template: '<ps-dashboard></ps-dashboard>',
         link: function (scope) {
 
-            scope.title = 'My First Dashboard';
+            scope.title = 'DataDooder in wwaDashboardDirective';
 
             scope.gridsterOpts = {
                 columns: 12,

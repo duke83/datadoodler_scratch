@@ -4,16 +4,7 @@
         <div class="ps-logo-area col-sm-6">
             <img class="ps-icon" ng-src="{{ iconFile }}" />
             <div class="ps-title-area">
-
             </div>
-
-            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()"
-                 class="ps-collapsed-menu pull-right">
-                <button type="button" class="btn ps-nav-button">
-                    <i class="fa fa-bars"></i>
-                </button>
-            </div>
-
         </div>
 
         <div class="ps-right-side-controls col-sm-6">
@@ -22,7 +13,7 @@
     </div>
 </div>
 
-<div class="ps-menu-area ps-menu-area-vertical" ng-show="isMenuVisible">
+<div class="ps-menu-area ps-menu-area-vertical">
 
     <dd-menu-panel label="Raw Data">
         <dd-glossary-menu></dd-glossary-menu>
