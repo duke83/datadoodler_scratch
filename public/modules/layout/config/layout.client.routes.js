@@ -1,7 +1,7 @@
 'use strict';
 
 // Setting up route
-angular.module('ddcore').config(['$stateProvider', '$urlRouterProvider',
+angular.module('layout').config(['$stateProvider', '$urlRouterProvider',
 	function($stateProvider, $urlRouterProvider) {
 		// Redirect to home view when route not found
 		$urlRouterProvider.otherwise('/');
@@ -10,7 +10,7 @@ angular.module('ddcore').config(['$stateProvider', '$urlRouterProvider',
 		$stateProvider.
 		state('ddDashboard', {
 			url: '/',
-			templateUrl: 'modules/ddcore/views/dddashboard.client.view.html'
+			templateUrl: 'modules/layout/views/layout.client.view.html'
 		});
 	}
 ]);
