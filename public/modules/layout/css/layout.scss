@@ -1,0 +1,41 @@
+
+$MainColor: #f0ad4e;
+$FooterColor: #f0ad4e;
+.layout-container{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.layout-header{
+  background-color:red;
+  height: 80px;
+}
+
+.layout-middle{
+
+  flex-grow: 1;
+  display:flex;
+  flex-direction:row;
+}
+
+.layout-middle-left{
+  background-color:$MainColor;
+  width:200px;
+}
+
+.layout-middle-center{
+  background-color:burlywood;
+  flex-grow:1;
+}
+.layout-middle-right{
+  background-color:blanchedalmond;
+  display:none;
+}
+
+.layout-footer{
+  background-color:$FooterColor;
+  /*flex-grow: 1;*/
+  /*flex-shrink: 1;*/
+  /*flex-basis: 5;*/
+}
