@@ -1,12 +1,12 @@
-<div class="layout-container">
+<div class="layout-container" ng-controller="doodleLayoutController">
     <div class="layout-header">header</div>
     <div class="layout-middle">
         <div class="layout-middle-left">middle-left</div>
         <div class="layout-middle-center">middle-center
 
-            <div gridster>
+            <div gridster="gridsterOpts">
                 <ul>
-                    <li gridster-item="item" ng-repeat="item in standardItems"></li>
+                    <li gridster-item="customItemMap" ng-repeat="item in customItems"></li>
                 </ul>
             </div>
 
