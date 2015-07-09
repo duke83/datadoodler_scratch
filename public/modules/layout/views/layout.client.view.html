@@ -2,7 +2,15 @@
     <div class="layout-header">header</div>
     <div class="layout-middle">
         <div class="layout-middle-left">middle-left</div>
-        <div class="layout-middle-center">middle-center</div>
+        <div class="layout-middle-center">middle-center
+
+            <div gridster>
+                <ul>
+                    <li gridster-item="item" ng-repeat="item in standardItems"></li>
+                </ul>
+            </div>
+
+        </div>
         <div class="layout-middle-right">middle-right</div>
     </div>
     <div class="layout-footer">footer</div>
