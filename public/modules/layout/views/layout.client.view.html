@@ -2,11 +2,16 @@
     <div class="layout-header">header</div>
     <div class="layout-middle">
         <div class="layout-middle-left">middle-left</div>
-        <div class="layout-middle-center">middle-center
+        <div class="layout-middle-center">
 
             <div gridster="gridsterOpts">
                 <ul>
-                    <li gridster-item="customItemMap" ng-repeat="item in customItems"></li>
+                    <li gridster-item="customItemMap" ng-repeat="item in customItems"
+                          ng-class="{'widget-datawindow':item.type==='data','widget-calcwindow':item.type==='calc',
+                          'widget-storywindow':item.type==='story'}" >
+
+                        <span ng-bind="item.type">hello</span>
+                    </li>
                 </ul>
             </div>
 

@@ -4,7 +4,7 @@
   flex-direction: column; }
 
 .layout-header {
-  background-color: red;
+  background-color: #2f4537;
   height: 80px; }
 
 .layout-middle {
@@ -13,11 +13,11 @@
   flex-direction: row; }
 
 .layout-middle-left {
-  background-color: #f0ad4e;
+  background-color: #74ab88;
   width: 200px; }
 
 .layout-middle-center {
-  background-color: burlywood;
+  background-color: #dcf8ec;
   flex-grow: 1; }
 
 .layout-middle-right {
@@ -25,10 +25,19 @@
   display: none; }
 
 .layout-footer {
-  background-color: #f0ad4e;
+  background-color: #2f4537;
   /*flex-grow: 1;*/
   /*flex-shrink: 1;*/
   /*flex-basis: 5;*/ }
 
-.gridster-item {
-  background-color: coral; }
+.widget-datawindow {
+  background-color: #4185bb;
+  color: #59b3fd; }
+
+.widget-calcwindow {
+  background-color: #bb8629;
+  color: #dcd167; }
+
+.widget-storywindow {
+  background-color: #bb5ba2;
+  color: #f5c0e8; }

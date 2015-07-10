@@ -2,17 +2,17 @@
 
 angular.module('layout').controller('doodleLayoutController',['$scope',function($scope){
     $scope.customItems = [
-        { size: { x: 2, y: 1 }, position: [0, 0] },
-        { size: { x: 2, y: 2 }, position: [0, 2] },
-        { size: { x: 1, y: 1 }, position: [0, 4] },
-        { size: { x: 1, y: 1 }, position: [0, 5] },
-        { size: { x: 2, y: 1 }, position: [1, 0] },
-        { size: { x: 1, y: 1 }, position: [1, 4] },
-        { size: { x: 1, y: 2 }, position: [1, 5] },
-        { size: { x: 1, y: 1 }, position: [2, 0] },
-        { size: { x: 2, y: 1 }, position: [2, 1] },
-        { size: { x: 1, y: 1 }, position: [2, 3] },
-        { size: { x: 1, y: 1 }, position: [2, 4] }
+        { size: { x: 2, y: 1 }, position: [0, 0], type:"data" },
+        { size: { x: 2, y: 2 }, position: [0, 2], type:"data"  },
+        { size: { x: 1, y: 1 }, position: [0, 4], type:"calc"  },
+        { size: { x: 1, y: 1 }, position: [0, 5], type:"calc"  },
+        { size: { x: 2, y: 1 }, position: [1, 0], type:"calc"  },
+        { size: { x: 1, y: 1 }, position: [1, 4], type:"calc"  },
+        { size: { x: 1, y: 2 }, position: [1, 5], type:"calc"  },
+        { size: { x: 1, y: 1 }, position: [2, 0], type:"calc"  },
+        { size: { x: 2, y: 1 }, position: [2, 1], type:"calc"  },
+        { size: { x: 1, y: 1 }, position: [2, 3], type:"story"  },
+        { size: { x: 1, y: 1 }, position: [2, 4], type:"story"  }
     ];
 
     // maps the item from customItems in the scope to the gridsterItem options

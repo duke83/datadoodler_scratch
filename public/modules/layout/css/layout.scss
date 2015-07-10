@@ -1,6 +1,21 @@
 
-$MainColor: #f0ad4e;
-$FooterColor: #f0ad4e;
+$LayoutMainColor: #2f4537;
+$LayoutSecondaryColor: #74ab88;
+$LayoutTertiaryColor: #96daae;
+$LayoutQuaternaryColor: #dcf8ec;
+
+$WidgetDataMain: #4185bb;
+$WidgetDataSecondary: #59b3fd;
+$WidgetDataTertiary: #173044;
+
+$WidgetCalcMain: #bb8629;
+$WidgetCalcSecondary: #dcd167;
+$WidgetCalcTertiary: #513a12;
+
+$WidgetStoryMain: #bb5ba2;
+$WidgetStorySecondary: #f5c0e8;
+$WidgetStoryTertiary: #3a1c32;
+
 .layout-container{
   display: flex;
   min-height: 100vh;
@@ -8,7 +23,7 @@ $FooterColor: #f0ad4e;
 }
 
 .layout-header{
-  background-color:red;
+  background-color:$LayoutMainColor;
   height: 80px;
 }
 
@@ -20,12 +35,12 @@ $FooterColor: #f0ad4e;
 }
 
 .layout-middle-left{
-  background-color:$MainColor;
+  background-color:$LayoutSecondaryColor;
   width:200px;
 }
 
 .layout-middle-center{
-  background-color:burlywood;
+  background-color:$LayoutQuaternaryColor;
   flex-grow:1;
 }
 .layout-middle-right{
@@ -34,13 +49,27 @@ $FooterColor: #f0ad4e;
 }
 
 .layout-footer{
-  background-color:$FooterColor;
+  background-color:$LayoutMainColor;
   /*flex-grow: 1;*/
   /*flex-shrink: 1;*/
   /*flex-basis: 5;*/
 }
 
 
-.gridster-item{
-  background-color:coral;
+.widget-datawindow{
+  background-color:$WidgetDataMain;
+  color:$WidgetDataSecondary;
+
 }
+
+.widget-calcwindow{
+  background-color:$WidgetCalcMain;
+  color:$WidgetCalcSecondary;
+
+}
+
+.widget-storywindow{
+  background-color:$WidgetStoryMain;
+  color:$WidgetStorySecondary;
+}
+
