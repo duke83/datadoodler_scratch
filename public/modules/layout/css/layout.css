@@ -4,7 +4,7 @@
   flex-direction: column; }
 
 .layout-header {
-  background-color: #2f4537;
+  background-color: #3fb7db;
   height: 80px; }
 
 .layout-middle {
@@ -13,7 +13,7 @@
   flex-direction: row; }
 
 .layout-middle-left {
-  background-color: #74ab88;
+  background-color: #2c4772;
   width: 200px; }
 
 .layout-middle-center {
@@ -25,7 +25,7 @@
   display: none; }
 
 .layout-footer {
-  background-color: #2f4537;
+  background-color: #3fb7db;
   /*flex-grow: 1;*/
   /*flex-shrink: 1;*/
   /*flex-basis: 5;*/ }

@@ -5,7 +5,7 @@ angular.module('layout').controller('doodleLayoutController',['$scope',function(
 
     ];
     $scope.addDoodleWidget=function(widgetType){
-        $scope.customItems.push({ size: { x: 3, y: 3 }, type:widgetType  });
+        $scope.customItems.push({ size: { x: 3, y: 2 }, type:widgetType  });
         console.log($scope.customItems);
     }
 
