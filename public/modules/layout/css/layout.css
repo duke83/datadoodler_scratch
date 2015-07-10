@@ -30,13 +30,22 @@
   /*flex-shrink: 1;*/
   /*flex-basis: 5;*/ }
 
+dataset-nav {
+  color: #4185bb; }
+
 .widget-datawindow {
   background-color: #4185bb;
   color: #59b3fd; }
 
+calc-nav {
+  color: #bb8629; }
+
 .widget-calcwindow {
   background-color: #bb8629;
   color: #dcd167; }
+
+story-nav {
+  color: #bb5ba2; }
 
 .widget-storywindow {
   background-color: #bb5ba2;

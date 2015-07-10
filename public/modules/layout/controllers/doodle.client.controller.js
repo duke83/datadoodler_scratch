@@ -2,18 +2,12 @@
 
 angular.module('layout').controller('doodleLayoutController',['$scope',function($scope){
     $scope.customItems = [
-        { size: { x: 2, y: 1 }, position: [0, 0], type:"data" },
-        { size: { x: 2, y: 2 }, position: [0, 2], type:"data"  },
-        { size: { x: 1, y: 1 }, position: [0, 4], type:"calc"  },
-        { size: { x: 1, y: 1 }, position: [0, 5], type:"calc"  },
-        { size: { x: 2, y: 1 }, position: [1, 0], type:"calc"  },
-        { size: { x: 1, y: 1 }, position: [1, 4], type:"calc"  },
-        { size: { x: 1, y: 2 }, position: [1, 5], type:"calc"  },
-        { size: { x: 1, y: 1 }, position: [2, 0], type:"calc"  },
-        { size: { x: 2, y: 1 }, position: [2, 1], type:"calc"  },
-        { size: { x: 1, y: 1 }, position: [2, 3], type:"story"  },
-        { size: { x: 1, y: 1 }, position: [2, 4], type:"story"  }
+
     ];
+    $scope.addDoodleWidget=function(widgetType){
+        $scope.customItems.push({ size: { x: 3, y: 3 }, type:widgetType  });
+        console.log($scope.customItems);
+    }
 
     // maps the item from customItems in the scope to the gridsterItem options
     $scope.customItemMap = {

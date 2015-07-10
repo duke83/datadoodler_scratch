@@ -55,6 +55,10 @@ $WidgetStoryTertiary: #3a1c32;
   /*flex-basis: 5;*/
 }
 
+//////  DATASET  //////
+dataset-nav{
+  color:$WidgetDataMain;
+}
 
 .widget-datawindow{
   background-color:$WidgetDataMain;
@@ -62,10 +66,21 @@ $WidgetStoryTertiary: #3a1c32;
 
 }
 
+//////  CALCULATION  //////
+calc-nav{
+  color:$WidgetCalcMain;
+}
+
 .widget-calcwindow{
   background-color:$WidgetCalcMain;
   color:$WidgetCalcSecondary;
 
+}
+
+
+//////  STORY  //////
+story-nav{
+  color:$WidgetStoryMain;
 }
 
 .widget-storywindow{

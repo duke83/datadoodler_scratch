@@ -5,4 +5,4 @@ angular.module('doodlestory').directive('storywidget',function(){
         restrict:'E',
         templateUrl:'modules/doodlestory/directives/storywidget.directive.html'
     }
-})
+});

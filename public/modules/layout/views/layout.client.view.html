@@ -1,15 +1,31 @@
 <div class="layout-container" ng-controller="doodleLayoutController">
     <div class="layout-header">header</div>
     <div class="layout-middle">
-        <div class="layout-middle-left">middle-left</div>
+
+
+
+        <!--NAVIGATION PANEL-->
+        <div class="layout-middle-left">
+
+            <dataset-nav></dataset-nav>
+
+            <calc-nav></calc-nav>
+
+            <story-nav></story-nav>
+        </div>
+
+
+
+        <!--DASHBOARD-->
         <div class="layout-middle-center">
+
 
             <div gridster="gridsterOpts">
                 <ul>
                     <li gridster-item="customItemMap" ng-repeat="item in customItems"
-                        ng-class="{'widget-datawindow':item.type==='data','widget-calcwindow':item.type==='calc',
+                        ng-class="{'widget-datawindow':item.type==='dataset','widget-calcwindow':item.type==='calc',
                           'widget-storywindow':item.type==='story'}">
-                        <datawidget ng-if="item.type==='data'"></datawidget>
+                        <datawidget ng-if="item.type==='dataset'"></datawidget>
                         <calcwidget ng-if="item.type==='calc'"></calcwidget>
                         <storywidget ng-if="item.type==='story'"></storywidget>
                         <span ng-bind="item.type">hello</span>
