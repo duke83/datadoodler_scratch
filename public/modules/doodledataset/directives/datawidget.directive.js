@@ -3,6 +3,7 @@
 angular.module('doodledataset').directive('datawidget',function(){
     return{
         restrict:'E',
-        template:'<h1>this is a template (not a templateUrl) for a datawidget</h1>'
+        templateUrl:'modules/doodledataset/directives/datawidget.directive.html'
+        //template:'<h1>this is a template (not a templateUrl) for a datawidget</h1>'
     }
 })

@@ -7,9 +7,9 @@
             <div gridster="gridsterOpts">
                 <ul>
                     <li gridster-item="customItemMap" ng-repeat="item in customItems"
-                          ng-class="{'widget-datawindow':item.type==='data','widget-calcwindow':item.type==='calc',
-                          'widget-storywindow':item.type==='story'}" >
-<datawidget></datawidget>
+                        ng-class="{'widget-datawindow':item.type==='data','widget-calcwindow':item.type==='calc',
+                          'widget-storywindow':item.type==='story'}">
+                        <datawidget ng-if="item.type==='data'"></datawidget>
                         <span ng-bind="item.type">hello</span>
                     </li>
                 </ul>
