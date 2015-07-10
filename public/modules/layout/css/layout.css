@@ -35,18 +35,21 @@ dataset-nav {
 
 .widget-datawindow {
   background-color: #4185bb;
-  color: #59b3fd; }
+  color: #59b3fd;
+  overflow: auto; }
 
 calc-nav {
   color: #bb8629; }
 
 .widget-calcwindow {
   background-color: #bb8629;
-  color: #dcd167; }
+  color: #dcd167;
+  overflow: auto; }
 
 story-nav {
   color: #bb5ba2; }
 
 .widget-storywindow {
   background-color: #bb5ba2;
-  color: #f5c0e8; }
+  color: #f5c0e8;
+  overflow: auto; }

@@ -63,6 +63,7 @@ dataset-nav{
 .widget-datawindow{
   background-color:$WidgetDataMain;
   color:$WidgetDataSecondary;
+  overflow: auto;
 
 }
 
@@ -74,7 +75,7 @@ calc-nav{
 .widget-calcwindow{
   background-color:$WidgetCalcMain;
   color:$WidgetCalcSecondary;
-
+  overflow: auto;
 }
 
 
@@ -86,5 +87,6 @@ story-nav{
 .widget-storywindow{
   background-color:$WidgetStoryMain;
   color:$WidgetStorySecondary;
+  overflow: auto;
 }
 
