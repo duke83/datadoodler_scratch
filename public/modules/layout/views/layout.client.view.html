@@ -10,6 +10,8 @@
                         ng-class="{'widget-datawindow':item.type==='data','widget-calcwindow':item.type==='calc',
                           'widget-storywindow':item.type==='story'}">
                         <datawidget ng-if="item.type==='data'"></datawidget>
+                        <calcwidget ng-if="item.type==='calc'"></calcwidget>
+                        <storywidget ng-if="item.type==='story'"></storywidget>
                         <span ng-bind="item.type">hello</span>
                     </li>
                 </ul>
