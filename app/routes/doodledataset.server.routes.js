@@ -3,7 +3,7 @@
 /**
  * Module dependencies.
  */
-var doodledatasets = require('../../app/controllers/doodledatasets.server.controller');
+var doodledatasets = require('../../app/controllers/glossaries.server.controller');
 
 module.exports = function(app) {
     // Article Routes
