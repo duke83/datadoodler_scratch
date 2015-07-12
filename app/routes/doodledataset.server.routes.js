@@ -8,7 +8,7 @@ var doodledatasets = require('../../app/controllers/glossaries.server.controller
 module.exports = function(app) {
     // Article Routes
     app.route('/datasets')
-        .get(doodledatasets.list)
+        .get(doodledatasets.list);
         //.post(doodledatasets.create);
 
     //app.route('/datasets/:datasetId')

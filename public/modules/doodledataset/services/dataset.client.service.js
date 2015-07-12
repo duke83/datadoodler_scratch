@@ -1,9 +1,9 @@
 'use strict';
 
 //Articles service used for communicating with the articles REST endpoints
-angular.module('doodledataset').factory('Dataset', ['$resource',
+angular.module('doodledataset').factory('DatasetService', ['$resource',
     function($resource) {
-        return $resource('datasets/:articleId', {
+        return $resource('datasets/:datasetId', {
             articleId: '@_id'
         }, {
             update: {

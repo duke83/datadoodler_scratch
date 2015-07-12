@@ -1,13 +1,17 @@
 'use strict';
 
-angular.module('layout').controller('doodleLayoutController',['$scope',function($scope){
-    $scope.customItems = [
+angular.module('layout').controller('doodleLayoutController',['$scope','DatasetService',function($scope,DatasetService){
 
-    ];
+    $scope.findDatasets = function(){
+        $scope.datasets=DatasetService.query();
+    };
+
+    $scope.customItems = [];
+
     $scope.addDoodleWidget=function(widgetType){
         $scope.customItems.push({ size: { x: 3, y: 2 }, type:widgetType  });
         console.log($scope.customItems);
-    }
+    };
 
     // maps the item from customItems in the scope to the gridsterItem options
     $scope.customItemMap = {
