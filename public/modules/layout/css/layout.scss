@@ -55,6 +55,17 @@ $WidgetStoryTertiary: #3a1c32;
   /*flex-basis: 5;*/
 }
 
+
+//////  WIDGET  //////
+.widget-container{
+  border:white 1px solid;
+}
+
+.widget-title{
+  color:red;
+}
+
+
 //////  DATASET  //////
 dataset-nav{
   color:$WidgetDataMain;

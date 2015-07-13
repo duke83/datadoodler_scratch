@@ -30,6 +30,12 @@
   /*flex-shrink: 1;*/
   /*flex-basis: 5;*/ }
 
+.widget-container {
+  border: white 1px solid; }
+
+.widget-title {
+  color: red; }
+
 dataset-nav {
   color: #4185bb; }
 
