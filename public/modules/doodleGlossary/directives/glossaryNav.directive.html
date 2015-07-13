@@ -1,0 +1,6 @@
+<span ng-init="findDatasets()">
+    <h2>glossaries</h2>
+    <div ng-repeat="ds in datasets"  ng-click="addDoodleWidget('glossary', ds.Name)">
+        <hr>{{ds.Name}}
+    </div>
+</span>

@@ -1,6 +1,6 @@
 .layout-container {
   display: flex;
-  min-height: 100%;
+  min-height: 100vh;
   flex-direction: column; }
 
 .layout-header {
@@ -39,10 +39,10 @@
   padding: 3px;
   color: #ace6fc; }
 
-dataset-nav {
+glossary-nav {
   color: #4185bb; }
 
-.widget-datawindow {
+.widget-glossary-window {
   background-color: #4185bb;
   color: #59b3fd;
   overflow: auto; }

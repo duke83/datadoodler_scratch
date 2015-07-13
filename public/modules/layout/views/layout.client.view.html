@@ -7,7 +7,7 @@
         <!--NAVIGATION PANEL-->
         <div class="layout-middle-left">
 
-            <dataset-nav></dataset-nav>
+            <glossary-nav></glossary-nav>
 
             <calc-nav></calc-nav>
 
@@ -25,7 +25,7 @@
                     <li gridster-item="customItemMap" ng-repeat="item in doodleWidgets"
                         ng-class="{'widget-datawindow':item.type==='dataset','widget-calcwindow':item.type==='calc',
                           'widget-storywindow':item.type==='story'}">
-                        <datawidget ng-if="item.type==='dataset'" widgetitem="item"></datawidget>
+                        <glossary-widget ng-if="item.type==='glossary'" widgetitem="item"></glossary-widget>
                         <calcwidget ng-if="item.type==='calc'"></calcwidget>
                         <storywidget ng-if="item.type==='story'"></storywidget>
 

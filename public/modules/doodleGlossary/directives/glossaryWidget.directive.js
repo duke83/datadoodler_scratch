@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('doodledataset').directive('datawidget',function(){
+angular.module('doodleGlossary').directive('glossaryWidget',function(){
     return{
         restrict:'E',
-        templateUrl:'modules/doodledataset/directives/datawidget.directive.html',
+        templateUrl:'modules/doodleGlossary/directives/glossaryWidget.directive.html',
         scope:{widgetitem:"="},
         link:function(scp,el,att){
 
