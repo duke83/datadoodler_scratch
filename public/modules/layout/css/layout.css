@@ -1,6 +1,6 @@
 .layout-container {
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   flex-direction: column; }
 
 .layout-header {
@@ -31,10 +31,13 @@
   /*flex-basis: 5;*/ }
 
 .widget-container {
-  border: white 1px solid; }
+  display: flex;
+  min-height: 100%;
+  flex-direction: column; }
 
 .widget-title {
-  color: red; }
+  padding: 3px;
+  color: #ace6fc; }
 
 dataset-nav {
   color: #4185bb; }

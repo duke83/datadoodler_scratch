@@ -6,7 +6,7 @@ $LayoutQuaternaryColor: #dcf8ec;
 
 $WidgetDataMain: #4185bb;
 $WidgetDataSecondary: #59b3fd;
-$WidgetDataTertiary: #173044;
+$WidgetDataTertiary: #ace6fc;
 
 $WidgetCalcMain: #bb8629;
 $WidgetCalcSecondary: #dcd167;
@@ -18,7 +18,7 @@ $WidgetStoryTertiary: #3a1c32;
 
 .layout-container{
   display: flex;
-  min-height: 100vh;
+  min-height: 100%;
   flex-direction: column;
 }
 
@@ -58,11 +58,14 @@ $WidgetStoryTertiary: #3a1c32;
 
 //////  WIDGET  //////
 .widget-container{
-  border:white 1px solid;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
 }
 
 .widget-title{
-  color:red;
+  padding:3px;
+  color:$WidgetDataTertiary;
 }
 
 

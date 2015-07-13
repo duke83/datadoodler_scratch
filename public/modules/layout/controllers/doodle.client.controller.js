@@ -6,22 +6,13 @@ angular.module('layout').controller('doodleLayoutController',['$scope','DatasetS
         $scope.datasets=DatasetService.query();
     };
 
-    $scope.customItems = [];
+    $scope.doodleWidgets = [];
 
     $scope.addDoodleWidget=function(widgetType,widgettitle){
-        $scope.customItems.push({ size: { x: 3, y: 2 }, type:widgetType, widgettitle:widgettitle  });
-        console.log($scope.customItems);
+        $scope.doodleWidgets.push({ size: { x: 3, y: 2 }, type:widgetType, widgettitle:widgettitle  });
+        console.log($scope.doodleWidgets);
     };
 
-    // maps the item from customItems in the scope to the gridsterItem options
-    //$scope.customItemMap = {
-    //    sizeX: 'item.size.x',
-    //    sizeY: 'item.size.y',
-    //    row: 'item.position[0]',
-    //    col: 'item.position[1]',
-    //    minSizeY: 'item.minSizeY',
-    //    maxSizeY: 'item.maxSizeY'
-    //};
 
     $scope.gridsterOpts = {
         columns: 6, // the width of the grid, in columns

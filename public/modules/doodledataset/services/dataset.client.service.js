@@ -1,6 +1,6 @@
 'use strict';
 
-//Articles service used for communicating with the articles REST endpoints
+//Used for communicating with the Dataset REST server endpoints/routes
 angular.module('doodledataset').factory('DatasetService', ['$resource',
     function($resource) {
         return $resource('datasets/:datasetId', {

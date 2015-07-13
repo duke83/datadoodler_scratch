@@ -22,7 +22,7 @@
 
             <div gridster="gridsterOpts">
                 <ul>
-                    <li gridster-item="customItemMap" ng-repeat="item in customItems"
+                    <li gridster-item="customItemMap" ng-repeat="item in doodleWidgets"
                         ng-class="{'widget-datawindow':item.type==='dataset','widget-calcwindow':item.type==='calc',
                           'widget-storywindow':item.type==='story'}">
                         <datawidget ng-if="item.type==='dataset'" widgetitem="item"></datawidget>
