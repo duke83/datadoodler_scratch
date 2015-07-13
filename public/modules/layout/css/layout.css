@@ -30,6 +30,9 @@
   /*flex-shrink: 1;*/
   /*flex-basis: 5;*/ }
 
+.gridster-item {
+  overflow: hidden; }
+
 .widget-container {
   display: flex;
   min-height: 100%;
@@ -46,6 +49,12 @@ glossary-nav {
   background-color: #4185bb;
   color: #59b3fd;
   overflow: auto; }
+
+.widget-glossary-variable-container {
+  display: block; }
+
+.widget-glossary-details {
+  display: block; }
 
 calc-nav {
   color: #bb8629; }

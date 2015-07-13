@@ -1,15 +1,31 @@
 'use strict';
 
-angular.module('layout').controller('doodleLayoutController',['$scope','DatasetService',function($scope,DatasetService){
+angular.module('layout').controller('doodleLayoutController', ['$scope', 'DatasetService', function ($scope, DatasetService) {
 
-    $scope.findDatasets = function(){
-        $scope.datasets=DatasetService.query();
+
+    $scope.findDatasets = function () {
+        var glossaries = DatasetService.query();
+        glossaries.$promise.then(function (g) {
+                g.forEach(function (glsry) {
+
+                        $scope.addDoodleWidget('glossary', glsry.Name, false, glsry);
+                        console.log(glsry);
+                    }
+                )
+            }
+        );
     };
 
     $scope.doodleWidgets = [];
 
-    $scope.addDoodleWidget=function(widgetType,widgettitle){
-        $scope.doodleWidgets.push({ size: { x: 3, y: 2 }, type:widgetType, widgettitle:widgettitle  });
+    $scope.addDoodleWidget = function (widgetType, widgettitle, onDashboard, payload) {
+        $scope.doodleWidgets.push({
+            size: {x: 3, y: 2},
+            type: widgetType,
+            widgetTitle: widgettitle,
+            onDashboard: onDashboard,
+            payload:payload
+        });
         console.log($scope.doodleWidgets);
     };
 
@@ -39,16 +55,22 @@ angular.module('layout').controller('doodleLayoutController',['$scope','DatasetS
         resizable: {
             enabled: true,
             handles: ['n', 'e', 's', 'w', 'ne', 'se', 'sw', 'nw'],
-            start: function(event, $element, widget) {}, // optional callback fired when resize is started,
-            resize: function(event, $element, widget) {}, // optional callback fired when item is resized,
-            stop: function(event, $element, widget) {} // optional callback fired when item is finished resizing
+            start: function (event, $element, widget) {
+            }, // optional callback fired when resize is started,
+            resize: function (event, $element, widget) {
+            }, // optional callback fired when item is resized,
+            stop: function (event, $element, widget) {
+            } // optional callback fired when item is finished resizing
         },
         draggable: {
             enabled: true, // whether dragging items is supported
             handle: '.my-class', // optional selector for resize handle
-            start: function(event, $element, widget) {}, // optional callback fired when drag is started,
-            drag: function(event, $element, widget) {}, // optional callback fired when item is moved,
-            stop: function(event, $element, widget) {} // optional callback fired when item is finished dragging
+            start: function (event, $element, widget) {
+            }, // optional callback fired when drag is started,
+            drag: function (event, $element, widget) {
+            }, // optional callback fired when item is moved,
+            stop: function (event, $element, widget) {
+            } // optional callback fired when item is finished dragging
         }
     };
 }]);

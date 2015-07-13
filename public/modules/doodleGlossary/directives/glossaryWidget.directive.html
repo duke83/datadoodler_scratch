@@ -1,5 +1,32 @@
 <span class="widget-container widget-glossary-window">
-    <span class="widget-title" ng-bind="widgetitem.widgettitle"></span>
-    I'm a datawidget directive!
+
+
+    <!--WIDGET TITLE-->
+    <span class="widget-title" ng-bind="widgetitem.widgetTitle"></span>
+
+    <!--WIDGET BODY-->
+    <span>
+
+        <!--SEARCH BOX-->
+    <input type="text" ng-model="searchText"/>
+
+        <!--FOR EACH VARIABLE-->
+        <span ng-repeat="var in widgetitem.payload.Variables | filter:searchText"
+              class="widget-glossary-variable-container"
+              ng-mouseleave="showDetails=false">
+
+            <!-- VARIABLE SELECTED -->
+            <input type="checkbox" ng-model="var.isSelected" style="margin:5px;"/>
+
+            <span ng-bind="var.VarName" ng-mouseover="showDetails=true"></span>
+
+            <span ng-if="showDetails" class="widget-glossary-details">
+                <span>Short Description:{{var.ShortDescription}}</span>
+                <span>Long Description:{{var.LongDescription}}</span>
+
+            </span>
+        </span>
+    </span>
+
 </span>
 

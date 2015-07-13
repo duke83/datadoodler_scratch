@@ -1,6 +1,7 @@
-<span ng-init="findDatasets()">
+<span>
     <h2>glossaries</h2>
-    <div ng-repeat="ds in datasets"  ng-click="addDoodleWidget('glossary', ds.Name)">
-        <hr>{{ds.Name}}
+    <div ng-repeat="g in doodleWidgets | filter:{type:'glossary'}"
+            ng-click="showDoodleWidget('glossary', g.Name)">
+       <input type="checkbox" ng-model="g.onDashboard"/> <span ng-bind="g.widgetTitle"></span>
     </div>
 </span>

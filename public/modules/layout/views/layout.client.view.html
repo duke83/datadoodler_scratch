@@ -1,4 +1,4 @@
-<div class="layout-container" ng-controller="doodleLayoutController">
+<div class="layout-container" ng-controller="doodleLayoutController" ng-init="findDatasets()">
     <div class="layout-header">header</div>
     <div class="layout-middle">
 
@@ -22,7 +22,7 @@
 
             <div gridster="gridsterOpts">
                 <ul>
-                    <li gridster-item="customItemMap" ng-repeat="item in doodleWidgets"
+                    <li gridster-item="customItemMap" ng-repeat="item in doodleWidgets | filter:{onDashboard:true}"
                         ng-class="{'widget-datawindow':item.type==='dataset','widget-calcwindow':item.type==='calc',
                           'widget-storywindow':item.type==='story'}">
                         <glossary-widget ng-if="item.type==='glossary'" widgetitem="item"></glossary-widget>

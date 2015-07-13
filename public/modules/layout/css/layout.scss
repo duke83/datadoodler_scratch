@@ -57,6 +57,10 @@ $WidgetStoryTertiary: #3a1c32;
 
 
 //////  WIDGET  //////
+.gridster-item{
+  overflow: hidden;
+}
+
 .widget-container{
   display: flex;
   min-height: 100%;
@@ -79,6 +83,14 @@ glossary-nav{
   color:$WidgetDataSecondary;
   overflow: auto;
 
+}
+
+.widget-glossary-variable-container{
+  display:block;
+}
+
+.widget-glossary-details{
+  display:block;
 }
 
 //////  CALCULATION  //////
