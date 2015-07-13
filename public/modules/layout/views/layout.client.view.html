@@ -25,7 +25,7 @@
                     <li gridster-item="customItemMap" ng-repeat="item in customItems"
                         ng-class="{'widget-datawindow':item.type==='dataset','widget-calcwindow':item.type==='calc',
                           'widget-storywindow':item.type==='story'}">
-                        <datawidget ng-if="item.type==='dataset'"></datawidget>
+                        <datawidget ng-if="item.type==='dataset'" widgetitem="item"></datawidget>
                         <calcwidget ng-if="item.type==='calc'"></calcwidget>
                         <storywidget ng-if="item.type==='story'"></storywidget>
                         <span ng-bind="item.type">hello</span>
