@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('doodleGlossary').directive('glossaryWidget',function(){
+angular.module('doodleGlossary').directive('glossaryWidget','CalculationsService',function(CalculationsService){
     return{
         restrict:'E',
         templateUrl:'modules/doodleGlossary/directives/glossaryWidget.directive.html',
