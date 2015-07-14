@@ -17,7 +17,7 @@
   width: 200px; }
 
 .layout-middle-center {
-  background-color: #dcf8ec;
+  background-color: #70f840;
   flex-grow: 1; }
 
 .layout-middle-right {
@@ -95,3 +95,5 @@ story-nav {
   background-color: #bb5ba2;
   color: #f5c0e8;
   overflow: auto; }
+
+/*# sourceMappingURL=layout.css.map */
