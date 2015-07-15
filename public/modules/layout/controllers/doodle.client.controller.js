@@ -1,12 +1,13 @@
 'use strict';
 
-angular.module('layout').controller('doodleLayoutController', ['$scope', 'doodleDataService', function ($scope, doodleDataService) {
+angular.module('layout').controller('doodleLayoutController',
+    ['$scope', 'doodleDataService', function ($scope, doodleDataService) {
 
 
     $scope.doodleWidgets = [];
 
     $scope.findDatasets = function () {
-        var glossaries = doodleDataService.query();
+        var glossaries = doodleDataService.datasetRestResource.query();
         glossaries.$promise.then(function (g) {
                 g.forEach(function (glsry) {
 

@@ -3,12 +3,19 @@
 //Used for communicating with the Dataset REST server endpoints/routes
 angular.module('commonData').factory('doodleDataService', ['$resource',
     function($resource) {
-        return $resource('datasets/:datasetId', {
-            articleId: '@_id'
-        }, {
-            update: {
-                method: 'PUT'
-            }
-        });
+
+        var doodleDataService  = {};
+
+        doodleDataService.datasetRestResource= $resource('datasets/:datasetId',
+            {articleId: '@_id'},
+            {update: {method: 'PUT'}}
+        );
+
+
+
+        return doodleDataService;
+
     }
+
+
 ]);
