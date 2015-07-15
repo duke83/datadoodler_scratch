@@ -16,7 +16,7 @@
               ng-mouseleave="showDetails=false">
 
             <!-- VARIABLE SELECTED -->
-            <input type="checkbox" ng-model="var.isSelected" style="margin:5px;"/>
+            <input type="checkbox" ng-change="checkboxChange(var)" ng-model="var.isSelected" style="margin:5px;"/>
 
             <span ng-bind="var.VarName" ng-mouseover="showDetails=true"></span>
 

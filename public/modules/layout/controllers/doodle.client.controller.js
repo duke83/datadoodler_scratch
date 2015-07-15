@@ -3,12 +3,14 @@
 angular.module('layout').controller('doodleLayoutController', ['$scope', 'DatasetService', function ($scope, DatasetService) {
 
 
+    $scope.doodleWidgets = [];
+
     $scope.findDatasets = function () {
         var glossaries = DatasetService.query();
         glossaries.$promise.then(function (g) {
                 g.forEach(function (glsry) {
 
-                        $scope.addDoodleWidget('glossary', glsry.Name, false, glsry);
+                        $scope.createDoodleWidget('glossary', glsry.Name, false, glsry);
                         console.log(glsry);
                     }
                 )
@@ -16,19 +18,53 @@ angular.module('layout').controller('doodleLayoutController', ['$scope', 'Datase
         );
     };
 
-    $scope.doodleWidgets = [];
 
-    $scope.addDoodleWidget = function (widgetType, widgettitle, onDashboard, payload) {
-        $scope.doodleWidgets.push({
-            size: {x: 3, y: 2},
-            type: widgetType,
-            widgetTitle: widgettitle,
-            onDashboard: onDashboard,
-            payload:payload
-        });
-        console.log($scope.doodleWidgets);
+    //this is called in glossaryWidget when (un)selecting a variable
+    $scope.removeDoodleWidget = function (widgetId) {
+        if (widgetId) {
+            for (var i = 0; $scope.doodleWidgets.length; i++) {
+                if ($scope.doodleWidgets[i].widgetId === widgetId) {
+                    $scope.doodleWidgets.splice(i, 1);
+                    return;
+                }
+            }
+        }
     };
 
+
+    $scope.createDoodleWidget = function (widgetType, widgettitle, onDashboard, payload) {
+        var item = {
+            size: {x: 3, y: 3},
+            type: widgetType,
+            widgetTitle: widgettitle,
+            widgetId: createDoodleWidgetId(widgetType),
+            onDashboard: onDashboard,
+            payload: payload
+        };
+
+        $scope.doodleWidgets.push(item);
+        //return newWidget.widgetId;
+    }
+
+
+    //create a doodleWidgetId property
+    function createDoodleWidgetId(widgetType, usr) {
+        var dt = new Date().getTime();
+        var uEmail = usr ? usr.email : 'kdm@adaptive.codes';
+        var newid = widgetType.substr(0, 1) + dt + uEmail;
+        return newid;
+    }
+
+
+    // maps the item from customItems in the scope to the gridsterItem options
+    $scope.customItemMap = {
+        sizeX: 'item.size.x',
+        sizeY: 'item.size.y',
+        row: 'item.position[0]',
+        col: 'item.position[1]',
+        minSizeY: 'item.minSizeY',
+        maxSizeY: 'item.maxSizeY'
+    };
 
     $scope.gridsterOpts = {
         columns: 6, // the width of the grid, in columns
