@@ -27,8 +27,8 @@
                         'widget-calcwindow':item.type==='calc',
                           'widget-storywindow':item.type==='story'}">
                         <glossary-widget ng-if="item.type==='glossary'" widgetitem="item"></glossary-widget>
-                        <calcwidget ng-if="item.type==='calc'"></calcwidget>
-                        <storywidget ng-if="item.type==='story'"></storywidget>
+                        <calcwidget ng-if="item.type==='calc'" widgetitem="item"></calcwidget>
+                        <storywidget ng-if="item.type==='story'" widgetitem="item"></storywidget>
 
                     </li>
                 </ul>

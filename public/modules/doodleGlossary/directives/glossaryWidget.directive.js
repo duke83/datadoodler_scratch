@@ -1,7 +1,7 @@
 'use strict';
 
 
-angular.module('doodleGlossary').directive('glossaryWidget', function () {
+angular.module('doodleGlossary').directive('glossaryWidget', ['doodleDataService',function (doodleDataService) {
     return {
         restrict: 'E',
         templateUrl: 'modules/doodleGlossary/directives/glossaryWidget.directive.html',
@@ -9,8 +9,14 @@ angular.module('doodleGlossary').directive('glossaryWidget', function () {
         link: function (scp, el, att) {
             scp.checkboxChange = function (glossaryVariable) {
                 console.log(glossaryVariable);
-                scp.createDoodleWidget('calc','test',true,glossaryVariable);
+                if(glossaryVariable.isSelected) {
+                    doodleDataService.createDoodleWidget('calc', 'test', true, glossaryVariable);
+                return;
+                }
+                //if not selected, remove
+                doodleDataService.removeDoodleWidget(glossaryVariable.widgetId)
+
             }
         }
    };
-});
+}]);
