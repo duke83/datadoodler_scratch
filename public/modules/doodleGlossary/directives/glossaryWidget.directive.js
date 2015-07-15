@@ -9,6 +9,7 @@ angular.module('doodleGlossary').directive('glossaryWidget', function () {
         link: function (scp, el, att) {
             scp.checkboxChange = function (glossaryVariable) {
                 console.log(glossaryVariable);
+                scp.createDoodleWidget('calc','test',true,glossaryVariable);
             }
         }
    };
