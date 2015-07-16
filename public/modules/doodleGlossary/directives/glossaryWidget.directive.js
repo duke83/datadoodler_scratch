@@ -10,8 +10,10 @@ angular.module('doodleGlossary').directive('glossaryWidget', ['doodleDataService
             scp.checkboxChange = function (glossaryVariable) {
                 console.log(glossaryVariable);
                 if(glossaryVariable.isSelected) {
-                    doodleDataService.createDoodleWidget('calc', 'test', true, glossaryVariable);
-                return;
+                    var newWidgetId = doodleDataService.createDoodleWidget('calc', 'test', true, glossaryVariable);
+                    //update the glossary variable with the widgetId to enable removale.
+                    glossaryVariable.widgetId = newWidgetId;
+                    return;
                 }
                 //if not selected, remove
                 doodleDataService.removeDoodleWidget(glossaryVariable.widgetId)

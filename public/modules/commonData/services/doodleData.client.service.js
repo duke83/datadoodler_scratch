@@ -33,7 +33,7 @@ angular.module('commonData').factory('doodleDataService', ['$resource',
         //this is called in glossaryWidget when (un)selecting a variable
         doodleDataService.removeDoodleWidget = function (widgetId) {
             if (widgetId) {
-                for (var i = 0; $scope.doodleWidgets.length; i++) {
+                for (var i = 0; doodleDataService.doodleWidgets.length; i++) {
                     if (doodleDataService.doodleWidgets[i].widgetId === widgetId) {
                         doodleDataService.doodleWidgets.splice(i, 1);
                         return;
@@ -44,6 +44,7 @@ angular.module('commonData').factory('doodleDataService', ['$resource',
 
 
         doodleDataService.createDoodleWidget = function (widgetType, widgettitle, onDashboard, payload) {
+
             var item = {
                 size: {x: 3, y: 3},
                 type: widgetType,
@@ -55,7 +56,9 @@ angular.module('commonData').factory('doodleDataService', ['$resource',
 
             doodleDataService.doodleWidgets.push(item);
 
-        }
+
+            return item.widgetId;
+        };
 
 
         //create a doodleWidgetId property

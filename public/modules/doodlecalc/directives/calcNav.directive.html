@@ -1,5 +1,9 @@
 <span ng-click="addDoodleWidget('calc')">
     <h1>calcNav</h1>
-    <span ng-repeat="var in CalculationsService.Calculations" >
-        <hr>{{var}}</span>
+    <span ng-repeat="calc in doodleWidgets | filter:{type:'calc'}" >
+
+
+    <input type="checkbox" ng-model="calc.onDashboard">
+        <span ng-bind="calc.payload.VarName"></span>
+    </span>
 </span>
