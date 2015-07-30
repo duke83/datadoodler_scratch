@@ -6,7 +6,39 @@
 
     <!--WIDGET BODY-->
 
-    <span ng-bind="widgetitem.payload.VarName"></span>
-    <span ng-bind="widgetitem.payload.ShortDescription"></span>
+    <span class="widget-content-section">
+        <span class="widget-content-label">Calculation Name:</span>
+        <span class="widget-content-value" ng-bind="widgetitem.payload.VarName"
+              title="Give this calculation a better name?"></span>
+        </span>
+
+    <span class="widget-content-section">
+        <span class="widget-content-label">Short Description:</span>
+        <span class="widget-content-value" ng-bind="widgetitem.payload.ShortDescription"></span>
+    </span>
+
+    <span class="widget-content-section">
+        <span class="widget-content-label">Long Description:</span>
+        <span class="widget-content-value" ng-bind="widgetitem.payload.LongDescription"></span>
+    </span>
+
+    <span class="widget-content-section">
+        <span class="widget-content-label">Id:</span>
+        <span class="widget-content-value" ng-bind="widgetitem.widgetId"></span>
+    </span>
+
+    <span class="widget-content-section">
+        <span class="widget-content-section" contenteditable="true">Formula</span>
+
+        <textarea ng-model="widgetitem.payload.formula" class="widget-calcwindow-formula"></textarea>
+
+    </span>
+
+    <span ng-repeat="var in vars">
+        <span ng-repeat="row in var.rows">
+            {{row}}
+        </span>
+    </span>
+
 {{widgetitem}}
 </span>

@@ -35,12 +35,27 @@
 
 .widget-container {
   display: flex;
-  min-height: 100%;
-  flex-direction: column; }
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  overflow: auto; }
 
 .widget-title {
   padding: 3px;
   color: #ace6fc; }
+
+.widget-content-section {
+  display: block; }
+
+.widget-content-label {
+  display: inline; }
+
+.widget-content-value {
+  display: inline; }
 
 glossary-nav {
   color: #4185bb; }
@@ -57,12 +72,21 @@ glossary-nav {
   display: block; }
 
 calc-nav {
-  color: #bb8629; }
+  color: #ece345; }
 
 .widget-calcwindow {
-  background-color: #bb8629;
-  color: #dcd167;
+  background-color: #ece345;
+  color: #4c3710;
   overflow: auto; }
+
+.widget-calcwindow .widget-content-label {
+  color: #513a12; }
+
+.widget-calcwindow .widget-content-value {
+  color: #bb8629; }
+
+.widget-calcwindow-formula {
+  background-color: #FFFFE0; }
 
 story-nav {
   color: #bb5ba2; }

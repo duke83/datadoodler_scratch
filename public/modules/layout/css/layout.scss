@@ -8,9 +8,12 @@ $WidgetDataMain: #4185bb;
 $WidgetDataSecondary: #59b3fd;
 $WidgetDataTertiary: #ace6fc;
 
-$WidgetCalcMain: #bb8629;
-$WidgetCalcSecondary: #dcd167;
+$WidgetCalcMain: #ece345;
+$WidgetCalcSecondary: #4c3710;
 $WidgetCalcTertiary: #513a12;
+$WidgetCalcContentLabel:#513a12;
+$WidgetCalcContentValue: #bb8629;
+$WidgetCalcFormulaBackground:#FFFFE0;
 
 $WidgetStoryMain: #bb5ba2;
 $WidgetStorySecondary: #f5c0e8;
@@ -63,8 +66,14 @@ $WidgetStoryTertiary: #3a1c32;
 
 .widget-container{
   display: flex;
-  min-height: 100%;
   flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  overflow: auto;
 }
 
 .widget-title{
@@ -72,6 +81,17 @@ $WidgetStoryTertiary: #3a1c32;
   color:$WidgetDataTertiary;
 }
 
+.widget-content-section{
+  display: block;
+}
+
+.widget-content-label{
+  display: inline;
+}
+
+.widget-content-value{
+  display:inline;
+}
 
 //////  GLOSSARY  //////
 glossary-nav{
@@ -104,6 +124,17 @@ calc-nav{
   overflow: auto;
 }
 
+.widget-calcwindow .widget-content-label{
+  color: $WidgetCalcContentLabel;
+}
+
+.widget-calcwindow .widget-content-value{
+  color: $WidgetCalcContentValue;
+}
+
+.widget-calcwindow-formula{
+  background-color: $WidgetCalcFormulaBackground;
+}
 
 //////  STORY  //////
 story-nav{
